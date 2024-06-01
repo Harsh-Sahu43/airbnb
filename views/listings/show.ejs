@@ -122,7 +122,7 @@
                         <p class="starability-result card-te" data-rating="<%= review.rating %>"></p>
                         <p class="card-text"><%= review.comment %></p>
                     </div>
-                 <%if(review.author.equals(currUser._id)){%>
+                    <%if(review.author._id.equals(currUser._id)){%>
                     <form
                       class="mb-3"
                       method="POST"
@@ -130,7 +130,7 @@
                     >
                         <button class="btn btn-sm btn-dark">delete</button>
                     </form>
-                 <% } %>   
+                    <% } %>
                 </div>
             <% }%>
         </div>
